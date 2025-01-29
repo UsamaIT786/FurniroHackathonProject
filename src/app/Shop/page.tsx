@@ -1,8 +1,6 @@
 import Image from "next/image";
-import shophero from "@/Images/shophero.png";
 import { IoIosArrowForward } from "react-icons/io";
-import Products from "@/components/Product";
-import ShopBelowHero from '@/components/ShopBelowHero'
+import ShopBelowHero from "@/components/ShopBelowHero";
 
 export default function ShopHero() {
   interface Card {
@@ -56,79 +54,72 @@ export default function ShopHero() {
       image: "/Images/image 8.png",
       description: "A software engineer specializing in backend systems.",
     },
-    
   ];
 
   return (
     <>
-      {/* shopsect */}
+      {/* Hero Section */}
       <div className="relative">
-        <Image src={'/Images/shophero.png'} alt="Picture of the author"width={2000}height={2000} />
-        <div className="absolute top-[50%] left-[50%] flex justify-center flex-col items-center ">
-          <h3 id="img" className="font-bold text-[1.5rem]">Shop</h3>
-          <div className="flex items-center">
+        <Image src="/Images/shophero.png" alt="Shop Hero" width={2000} height={1000} className="w-full h-auto object-cover" />
+        <div className="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-center">
+          <h3 id="img" className="text-2xl sm:text-4xl font-bold text-black">Shop</h3>
+          <div className="flex justify-center items-center text-black mt-2">
             <h3 id="img">Home</h3>
-            <IoIosArrowForward />
+            <IoIosArrowForward className="mx-2 text-xl" />
             <h3 id="img">Shop</h3>
           </div>
         </div>
-        {/* <div> */}
-        {/* </div> */}
       </div>
+
+      {/* Below Hero Section */}
       <ShopBelowHero />
-      <div className="cardsContainer">
+
+      {/* Product Cards */}
+      <div className="cardsContainer grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4 py-8">
         {data.map((card, index) => (
-          <div className="card" key={index} style={{ width: "15rem" }}>
-            <img id="img"
-              src={card.image}
-              style={{ width: "18rem", height: "18rem" }}
-              className="card-img-top"
-              //   alt={card.title}
-            />
-            <div className="card-body">
-              <h5 className="card-title" style={{ fontWeight: "bold" }}>
-                {card.name}
-              </h5>
-              <p className="card-text">{card.description}</p>
-              <h5 className="card-title" style={{ fontWeight: "bold" }}>
-                {card.price}
-              </h5>
+          <div key={index} className="card bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+            <Image id="img" src={card.image} alt={card.name} width={300} height={300} className="w-full h-[200px] object-cover rounded-md" />
+            <div className="card-body mt-4">
+              <h5 className="card-title font-semibold text-lg">{card.name}</h5>
+              <p className="card-text text-gray-600 text-sm">{card.description}</p>
+              <h5 className="font-bold text-xl mt-2">{card.price}</h5>
             </div>
           </div>
         ))}
       </div>
-      <div className=" flex gap-2 justify-center " >
-     <button className="w-[2.5rem] h-[2.5rem] mb-3  bg-[#F9F1E7]  hover:bg-[#B88E2F] cursor-pointer text-white:">1</button>
-     <button className="w-[2.5rem] h-[2.5rem] mb-3  bg-[#F9F1E7]  hover:bg-[#B88E2F] cursor-pointer text-white:">2</button>
-     <button className="w-[2.5rem] h-[2.5rem] mb-3  bg-[#F9F1E7]  hover:bg-[#B88E2F] cursor-pointer text-white:">3</button>
-     <button className="w-[4rem] h-[2.5rem] mb-3  bg-[#F9F1E7]  hover:bg-[#B88E2F] cursor-pointer text-white:">Next</button>
 
-</div>
-      <div className="flex justify-evenly items-center p-2 w-[100%] h-[8rem] bg-[#F9F1E7]">
-        
-        < div className="">
-    
-        <Image id="img" src="/Images/Group.png" width={40} height={40} alt="Picture of the author" />
-        
+      {/* Pagination */}
+      <div className="flex gap-2 justify-center py-4">
+        <button className="w-[2.5rem] h-[2.5rem] bg-[#F9F1E7] hover:bg-[#B88E2F] text-white rounded-md cursor-pointer">1</button>
+        <button className="w-[2.5rem] h-[2.5rem] bg-[#F9F1E7] hover:bg-[#B88E2F] text-white rounded-md cursor-pointer">2</button>
+        <button className="w-[2.5rem] h-[2.5rem] bg-[#F9F1E7] hover:bg-[#B88E2F] text-white rounded-md cursor-pointer">3</button>
+        <button className="w-[4rem] h-[2.5rem] bg-[#F9F1E7] hover:bg-[#B88E2F] text-white rounded-md cursor-pointer">Next</button>
+      </div>
+
+      {/* Additional Information Section */}
+      <div className="flex justify-evenly items-center bg-[#F9F1E7] p-6">
+        <div className="text-center">
+          <Image id="img" src="/Images/Group.png" width={40} height={40} alt="High Quality" />
           <h4 className="font-bold">High Quality</h4>
-          <p>crafted from top materials</p>
+          <p>Crafted from top materials</p>
         </div>
-        <div>
-        <Image id="img" src="/Images/warr.png" width={40} height={40} alt="Picture of the author" />
+        <div className="text-center">
+          <Image id="img" src="/Images/warr.png" width={40} height={40} alt="Warranty Protection" />
           <h4 className="font-bold">Warranty Protection</h4>
           <p>Over 2 years</p>
         </div>
-        <div>
-        <Image id="img" src="/Images/vector.png" width={40} height={40} alt="Picture of the author" />
+        <div className="text-center">
+          <Image id="img" src="/Images/vector.png" width={40} height={40} alt="Free Shipping" />
           <h4 className="font-bold">Free Shipping</h4>
-          <p>Order over 150 $</p>
+          <p>Order over 150$</p>
         </div>
-        <div>
-        <Image id="img" src="/Images/customer.png" width={40} height={40} alt="Picture of the author" />
-          <h4 className="font-bold">24 / 7 Support</h4>
+        <div className="text-center">
+          <Image id="img" src="/Images/customer.png" width={40} height={40} alt="24/7 Support" />
+          <h4 className="font-bold">24/7 Support</h4>
           <p>Dedicated support</p>
         </div>
       </div>
     </>
   );
 }
+   
