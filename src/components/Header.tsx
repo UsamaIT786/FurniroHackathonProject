@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "@/Pictures/Logo.png";
+import Logo from "@/Images/Logo.png";
 import Link from "next/link";
 import { MdPersonOutline } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
@@ -9,20 +9,22 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 export default function Header() {
   return (
     <>
-      <div className="navbar flex justify-between items-center p-4">
-        <div className="logo flex-shrink-0">
+      <div className="navbar flex justify-between items-center py-4 px-4 sm:px-6 lg:px-12 bg-white">
+        {/* Logo Section */}
+        <div className="logo flex items-center">
           <Image
             id="img"
             src={'/Images/Logo.png'}
             width={185}
             height={41}
-            alt="Logo"
+            alt="Picture of the author"
+            className="object-contain"
           />
         </div>
 
-        {/* Navigation buttons */}
-        <div className="navbtns hidden md:flex">
-          <ul className="flex space-x-6">
+        {/* Navigation Buttons (Menu) */}
+        <div className="navbtns hidden sm:flex">
+          <ul className="head flex space-x-6">
             <li className="hover:text-green-500">
               <Link href={'/'}>Home</Link>
             </li>
@@ -38,25 +40,25 @@ export default function Header() {
           </ul>
         </div>
 
-        {/* Icons */}
+        {/* Icons Section */}
         <div className="icons flex space-x-4 items-center">
-          <MdPersonOutline id="img" className="cursor-pointer" />
-          <CiSearch id="img" className="cursor-pointer" />
-          <GoHeart id="img" className="cursor-pointer" />
+          <MdPersonOutline id="img" className="text-xl" />
+          <CiSearch id="img" className="text-xl" />
+          <GoHeart id="img" className="text-xl" />
           <Link href={'/cart'}>
-            <AiOutlineShoppingCart id="img" className="cursor-pointer" />
+            <AiOutlineShoppingCart id="img" className="text-xl" />
           </Link>
         </div>
 
-        {/* Mobile Menu Button (visible on small screens) */}
-        <div className="mobile-menu-btn md:hidden">
-          <button className="text-2xl">☰</button>
+        {/* Mobile Menu Button */}
+        <div className="sm:hidden flex items-center">
+          <button className="text-xl">☰</button>
         </div>
       </div>
 
-      {/* Mobile Menu (hidden by default, visible on small screens) */}
-      <div className="mobile-menu md:hidden">
-        <ul className="space-y-4 mt-4 text-center">
+      {/* Mobile Menu (Dropdown) */}
+      <div className="sm:hidden mt-4">
+        <ul className="space-y-4 text-center">
           <li className="hover:text-green-500">
             <Link href={'/'}>Home</Link>
           </li>

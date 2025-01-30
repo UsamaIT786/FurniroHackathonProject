@@ -226,3 +226,18 @@ footer .para p{
     transform: translateY(0);
   }
 }
+
+#button{
+
+  color: white;
+  background-color: red;
+  border: 2px solid red;
+  border-radius: 15px;
+  padding: 10px;
+  line-height: 1%;
+  width: 120px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+
