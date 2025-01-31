@@ -80,7 +80,7 @@ export default function Products() {
       </div>
 
       <div className="text-center py-4">
-        <h2 className="text-3xl font-bold">Our Products</h2>
+        <h2 id="img" className="text-3xl font-bold">Our Products</h2>
       </div>
 
       {/* Cards Container */}
@@ -88,7 +88,7 @@ export default function Products() {
         {data.map((card, index) => (
           <div className="card bg-white shadow-lg rounded-lg overflow-hidden" key={index}>
             <div className="relative">
-              <img
+              <img id="img"
                 src={card.image}
                 alt={card.name}
                 className="w-full h-48 object-cover"
@@ -130,7 +130,7 @@ export default function Products() {
 
       {/* Show More Button */}
       <div className="flex justify-center mt-6 mb-12">
-        <button className="px-6 py-2 border-2 border-[#B88E2F] text-[#B88E2F] font-semibold rounded-md hover:bg-[#B88E2F] hover:text-white transition-all">
+        <button id="img" className="px-6 py-2 border-2 border-[#B88E2F] text-[#B88E2F] font-semibold rounded-md hover:bg-[#B88E2F] hover:text-white transition-all">
           Show More
         </button>
       </div>
