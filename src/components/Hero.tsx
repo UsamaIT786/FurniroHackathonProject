@@ -8,7 +8,7 @@ export default function Hero() {
         {/* Hero Image Section */}
         <div className="w-full lg:w-1/2 relative min-h-[300px] lg:min-h-[600px]">
           <Image id="img"
-            src="/Images/hero.png"
+            src="/Images/Hero.png"
             alt="Modern furniture"
             fill
             className="object-cover"

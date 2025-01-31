@@ -66,7 +66,7 @@ export default function Cart() {
           <p id="btn" className="text-center">Over 2 years</p>
         </div>
         <div className="flex flex-col items-center mt-8 sm:mt-0">
-          <Image id="img" src="/Images/vector.png" width={40} height={40} alt="Free Shipping" />
+          <Image id="img" src="/Images/Vector.png" width={40} height={40} alt="Free Shipping" />
           <h4 id="img" className="font-bold">Free Shipping</h4>
           <p id="btn" className="text-center">Orders over 150$</p>
         </div>
