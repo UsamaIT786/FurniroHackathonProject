@@ -1,36 +1,56 @@
-import Image from "next/image"
-import Living from "@/Images/living.png" 
-import Bedroom from "@/Images/bedroom.png" 
-export default function SubHero(){
-
+    import Image from "next/image";
+    import living from "@/Images/living.png";
+    import bedroom from "@/Images/bedroom.png";
+    import dining from "@/Images/dining.png"; // Assuming Dining image path is correctd
+    export default function SubHero() {
     return (
         <>
-        <div className="subText">
-            <h3 id="img"> Browse The Range</h3>
-            <p id="btn"> Furniro,Market Place Builder, we believe that furniture is more than just functional—it's the foundation of creating a space that reflects your personality and enhances your lifestyle. Whether you're redesigning your living room, upgrading your bedroom, or setting up a home office, we offer a curated selection of stylish, high-quality furniture that fits every need and budget. From cozy sofas that invite relaxation to elegant dining sets perfect for family gatherings, our collection ensures that you don’t have to compromise on comfort or style. Browse our pieces today and transform your home into a space you’ll love!
+        <div className="subText text-center sm:text-left px-4 sm:px-16 mb-8">
+            <h3 id="btn" className="text-2xl sm:text-3xl md:text-4xl text-center font-extrabold mb-2">
+            Browse The Range
+            </h3>
+            <p id="btn" className="text-sm sm:text-base md:text-lg text-gray-600 text-center">Welcome to our furniture store, where we bring comfort, style, and functionality to every corner of your home. Our curated collection features a wide range of high-quality furniture pieces, from elegant living room sets to cozy bedroom essentials. Whether you’re looking to refresh your space with modern designs or seeking timeless classics, we offer something for every taste and budget. Crafted with the finest materials, our furniture is designed to provide both aesthetic appeal and lasting durability. Browse through our exclusive collections, and let us help you create a home that reflects your unique personality and lifestyle. At our store, comfort meets design, making your home feel like the perfect haven.
 
-</p>
+            </p>
         </div>
-        <div className="imgArea">
-            <div className="imgOne">
 
-            <Image id="img" src={'/Images/dining.png'} width={282} height={282} alt="Picture of the author" />
-                <h6>Dining</h6>
+        <div className="imgArea flex flex-col sm:flex-row justify-center sm:justify-between items-center sm:space-x-8 px-4 sm:px-16">
+            {/* Dining Image */}
+            <div className="imgOne mb-8 sm:mb-0 text-center sm:text-left">
+            <Image id="img"
+                src={'/Images/dining.png'}
+                width={282}
+                height={282}
+                alt="Dining"
+                className="object-cover rounded-lg"
+            />
+            <h6 className="mt-4 text-lg font-semibold">Dining</h6>
             </div>
-                
 
-            <div className="imgTow">
-            <Image id="img" src={'/Images/living.png'} width={282} height={282} alt="Picture of the author" />
-            <h6>Living</h6>
+            {/* Living Image */}
+            <div className="imgTwo mb-8 sm:mb-0 text-center sm:text-left">
+            <Image id="img"
+                src={'/Images/living.png'}
+                width={282}
+                height={282}
+                alt="Living"
+                className="object-cover rounded-lg"
+            />
+            <h6 className="mt-4 text-lg font-semibold">Living</h6>
             </div>
-            
-            <div className="imgThree">
 
-            <Image id="img" src={'/Images/bedroom.png'} width={282} height={282} alt="Picture of the author" />
-            <h6>Bedroom</h6>    
+            {/* Bedroom Image */}
+            <div className="imgThree mb-8 sm:mb-0 text-center sm:text-left">
+            <Image id="img"
+                src={'/Images/bedroom.png'}
+                width={282}
+                height={282}
+                alt="Bedroom"
+                className="object-cover rounded-lg"
+            />
+            <h6 className="mt-4 text-lg font-semibold">Bedroom</h6>
             </div>
-           </div>
-
+        </div>
         </>
-    )
-}
+    );
+    }
