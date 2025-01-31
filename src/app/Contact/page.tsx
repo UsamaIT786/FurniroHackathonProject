@@ -91,7 +91,7 @@ export default function () {
           <p>Over 2 years</p>
         </div>
         <div className="text-center sm:text-left">
-          <Image id="img" src="/Images/vector.png" width={40} height={40} alt="Free Shipping" />
+          <Image id="img" src="/Images/Vector.png" width={40} height={40} alt="Free Shipping" />
           <h4 className="font-bold">Free Shipping</h4>
           <p>Order over 150 $</p>
         </div>
