@@ -16,7 +16,13 @@ export default function Home() {
       <SubHero />
       <Cart />
 
+
+
+      
+
       
     </main>
   );
 }
+
+

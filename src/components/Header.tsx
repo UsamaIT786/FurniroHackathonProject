@@ -1,3 +1,6 @@
+
+"use client"
+
 import Image from "next/image";
 import Logo from "@/Images/Logo.png";
 import Link from "next/link";
@@ -42,7 +45,10 @@ export default function Header() {
 
         {/* Icons Section */}
         <div className="icons flex space-x-4 items-center">
-          <MdPersonOutline id="img" className="text-xl" />
+            <MdPersonOutline id="img" className="text-xl" />
+
+
+            
           <CiSearch id="img" className="text-xl" />
           <GoHeart id="img" className="text-xl" />
           <Link href={'/cart'}>

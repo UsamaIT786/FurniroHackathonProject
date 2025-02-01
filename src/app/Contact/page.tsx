@@ -20,7 +20,7 @@ export default function () {
         </div>
       </div>
 
-      <div className="text-center mt-10">
+      <div className="text-center mt-10 justify-center items-center">
         <h2 id="img" className="font-extrabold text-[2rem]">Get In Touch With Us</h2>
         <p id="img" className="mt-4 text-gray-600">
           For More Information About Our Product & Services. Please Feel Free To Drop Us
@@ -29,8 +29,8 @@ export default function () {
         </p>
       </div>
 
-      <div className="flex flex-col sm:flex-row justify-evenly leading-8 mt-6 space-y-6 sm:space-y-0 sm:space-x-8">
-        <div className="w-[80%] sm:w-[14rem] text-center sm:text-left">
+      <div className="flex flex-col sm:flex-row justify-center leading-8 mt-6 space-y-6 sm:space-y-0 sm:space-x-8">
+        <div className="w-[80%] sm:w-[14rem] text-center sm:text-center">
           <div className="flex items-start justify-center sm:justify-start space-x-3">
             <FaLocationDot className="text-[1.5rem] text-[#B88E2F]" />
             <div>
@@ -39,7 +39,7 @@ export default function () {
             </div>
           </div>
 
-          <div className="flex items-start justify-center sm:justify-start space-x-3 mt-6">
+          <div className="flex items-start justify-center sm:justify-center space-x-3 mt-6">
             <TbPhoneFilled className="text-[1.5rem] text-[#B88E2F]" />
             <div>
               <h2 id="btn" className="font-bold">Phone</h2>
@@ -48,7 +48,7 @@ export default function () {
             </div>
           </div>
 
-          <div className="flex items-start justify-center sm:justify-start space-x-3 mt-6">
+          <div className="flex items-start justify-center sm:justify-center space-x-3 mt-6">
             <TbClockHour4Filled className="text-[1.5rem] text-[#B88E2F]" />
             <div>
               <h2 id="btn" className="font-bold">Working Time</h2>
@@ -79,23 +79,23 @@ export default function () {
         </div>
       </div>
 
-      <div className="mt-10 mb-10 flex flex-col sm:flex-row justify-evenly items-center bg-[#F9F1E7] p-4 space-y-6 sm:space-y-0 sm:space-x-8">
-        <div className="text-center sm:text-left">
+      <div className="mt-10 mb-10 flex flex-col sm:flex-row justify-center items-center bg-[#F9F1E7] p-4 space-y-6 sm:space-y-0 sm:space-x-8">
+        <div className="text-center sm:text-center">
           <Image id="img" src="/Images/Group.png" width={40} height={40} alt="High Quality" />
           <h4 className="font-bold">High Quality</h4>
           <p>Crafted from top materials</p>
         </div>
-        <div className="text-center sm:text-left">
+        <div className="text-center sm:text-center">
           <Image id="img" src="/Images/warr.png" width={40} height={40} alt="Warranty Protection" />
           <h4 className="font-bold">Warranty Protection</h4>
           <p>Over 2 years</p>
         </div>
-        <div className="text-center sm:text-left">
+        <div className="text-center sm:text-center">
           <Image id="img" src="/Images/Vector.png" width={40} height={40} alt="Free Shipping" />
           <h4 className="font-bold">Free Shipping</h4>
           <p>Order over 150 $</p>
         </div>
-        <div className="text-center sm:text-left">
+        <div className="text-center sm:text-center">
           <Image id="img" src="/Images/customer.png" width={40} height={40} alt="24/7 Support" />
           <h4 className="font-bold">24/7 Support</h4>
           <p>Dedicated support</p>
