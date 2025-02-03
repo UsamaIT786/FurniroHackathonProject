@@ -130,7 +130,7 @@ export default function Products() {
 
       {/* Show More Button */}
       <div className="flex justify-center mt-6 mb-12">
-        <button id="img" className="px-6 py-2 border-2 border-[#B88E2F] text-[#B88E2F] font-semibold rounded-md hover:bg-[#B88E2F] hover:text-white transition-all">
+        <button className="px-6 py-2 border-2 border-[#B88E2F] text-[#B88E2F] font-semibold rounded-md hover:bg-[#B88E2F] hover:text-white transition-all">
           Show More
         </button>
       </div>
